@@ -11,6 +11,9 @@ describe('Login checkin', () => {
         loginPageObject.giveUserName(data.loginCred.userName);
         loginPageObject.giveUserPass(data.loginCred.userPassword);
         loginPageObject.clickLoginButton();
+        browser.getTitle().then((title) =>{
+            console.log(title);
+        });
         browser.sleep(30000)
     })
 });
